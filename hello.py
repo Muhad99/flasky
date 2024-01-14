@@ -66,13 +66,13 @@ def index():
         FlaskForm.name.data = ''
         return render_template('index.html', form=formi, name=name)
 
-@app.route('/', methods=['GET','POST'])
-def index():
-    from = NameFrom()
-    if form.validate_on_submit():
-        session['name'] = form.name.data
-        return redirect(url_for('index'))
-    return render_template('index.html', form=form, name=session.get('name'))
+# @app.route('/', methods=['GET','POST'])
+# def index():
+#     from = NameFrom()
+#     if form.validate_on_submit():
+#         session['name'] = form.name.data
+#         return redirect(url_for('index'))
+#     return render_template('index.html', form=form, name=session.get('name'))
 
 
 
